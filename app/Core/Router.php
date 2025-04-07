@@ -4,11 +4,24 @@ namespace App\Core;
 
 class Router {
     public static function route() {
-        // Route très simple
-        $controllerName = 'App\\Controllers\\CustomerController';
-        $method = 'index';
+        $uri = $_SERVER['REQUEST_URI'];
 
-        $controller = new $controllerName();
-        call_user_func([$controller, $method]);
+        switch ($uri) {
+            case '/':
+            case '/home':
+                $controller = new \App\Controllers\HomeController();
+                $controller->index();
+                break;
+
+            case '/customers':
+                $controller = new \App\Controllers\CustomerController();
+                $controller->index();
+                break;
+
+            default:
+                http_response_code(404);
+                echo "Page non trouvée.";
+                break;
+        }
     }
 }
