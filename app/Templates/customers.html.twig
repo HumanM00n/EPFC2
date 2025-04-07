@@ -18,13 +18,14 @@
         </thead>
         <tbody>
             {% for c in customers %}
-                <tr>
-                    <td>{{ c.customerName }}</td> {# Nom du client #}
-                    <td>{{ c.city }}</td> {# Ville du client #}
-                    <td>{{ c.firstName }} {{ c.lastName }}</td> {# Nom et Prénom de l'employé #}
-                </tr>
+            <tr>
+                <td>{{ c.customerName }}</td> {# Nom du client #}
+                <td>{{ c.city }}</td> {# Ville du client #}
+                <td>{{ c.firstName }} {{ c.lastName }}</td> {# Nom et Prénom de l'employé #}
+            </tr>
             {% endfor %}
         </tbody>
     </table>
 </body>
+
 </html>
