@@ -1,0 +1,17 @@
+{
+    "name": "mathjis/epcf2",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "HumanM00n",
+            "email": "mrouy92@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.20"
+    }
+}

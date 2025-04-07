@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style/customer.css">
+    <title>Liste des clients</title>
+</head>
+<body>
+    <h1>Clients et leurs commerciaux</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom du client</th>
+                <th>Ville</th>
+                <th>Commercial</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in customers %}
+                <tr>
+                    <td>{{ c.customerName }}</td> {# Nom du client #}
+                    <td>{{ c.city }}</td> {# Ville du client #}
+                    <td>{{ c.firstName }} {{ c.lastName }}</td> {# Nom et Prénom de l'employé #}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
